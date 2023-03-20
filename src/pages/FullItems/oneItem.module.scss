@@ -1,0 +1,40 @@
+.root {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  max-width:1900px;
+  margin-left: auto;
+}
+.content {
+  display: flex;
+}
+.content {
+  display: flex;
+  gap: 50px;
+  justify-content: space-evenly ;
+  max-width: 1100px;
+
+}
+.img {
+  max-width: 600px;
+  max-height: 80%;
+
+}
+.breadcrumbs{
+  display: flex;
+
+}
+.breadcrumbs a {
+  opacity: 40%;
+  @apply hover:text-brown  hover:opacity-100
+}
+.right{
+  display:flex;
+  flex-direction: column;
+  gap:20px;
+  @apply text-xl
+}
+.button{
+  background-color: #E0BEA2;
+  border-radius: 10px;
+  color: white;
+}

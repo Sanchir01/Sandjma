@@ -1,4 +1,29 @@
-.app{
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 0;
+}
+
+.nav {
+  max-width: 47vh;
+
+  position:relative;
+}
+.img{
+  display: inline;
+  z-index: -1;
+}
+.nav p {
+  padding-top: 8px;
+}
+.button{
+  position:absolute;
+  right: 0;
+  bottom: 0;
+  padding: 10px;
+  background-color: #E0BEA2;
+  border-radius: 10px;
+  color: white;
+  display: block;
 }

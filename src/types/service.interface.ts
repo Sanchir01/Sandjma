@@ -1,6 +1,15 @@
 export interface IProduct {
-	id: number
+	id: number | string
 	title: string
-	images: string[]
+	imageUrl: string[]
 	price: number
+	rating: number
+}
+
+export interface OneProduct {
+	id: number | string
+	title: string
+	imageUrl: string
+	price: number
+	rating: number
 }

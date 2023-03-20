@@ -11,23 +11,39 @@ import { useAppDispatch } from '../../../../../Store/store'
 const ListSort: FilterSliceSort[] = [
 	{ name: 'Популярности(возр)', sortName: SortPropertyEnum.RATING_DESC },
 	{ name: 'Популярности(убыв)', sortName: SortPropertyEnum.RATING_ASC },
-	{ name: 'Цене(убыв)', sortName: SortPropertyEnum.PRICE_DESC },
-	{ name: 'Цене(возр)', sortName: SortPropertyEnum.PRICE_ASC },
+	{ name: 'Цене(возр)', sortName: SortPropertyEnum.PRICE_DESC },
+	{ name: 'Цене(убыв)', sortName: SortPropertyEnum.PRICE_ASC },
 	{ name: 'Алфавиту(возр)', sortName: SortPropertyEnum.TITLE_DESC },
 	{ name: 'Алфавиту(убыв)', sortName: SortPropertyEnum.TITLE_ASC }
 ]
 
 const SortPopup: FC = () => {
-	const [open, setOpen] = React.useState(true)
+	const [open, setOpen] = React.useState(false)
 	const value = useSelector(selectFilters)
 	const dispatch = useAppDispatch()
-	const onClickSortPopup = (obj: any) => {
+
+	const sortRef = React.useRef<HTMLDivElement>(null)
+
+	const onClickSortPopup = (obj: FilterSliceSort) => {
 		dispatch(setSort(obj))
 		setOpen(!open)
 	}
 
+	React.useEffect(() => {
+		const handleOutSideClick = (event: any) => {
+			const path = event.composedPath()
+
+			if (!path.includes(sortRef.current)) {
+				setOpen(false)
+			}
+		}
+		document.body.addEventListener('click', handleOutSideClick)
+
+		return () => document.body.removeEventListener('click', handleOutSideClick)
+	}, [])
+
 	return (
-		<div className='sort text-xl'>
+		<div ref={sortRef} className='sort text-xl'>
 			<div className='sort__label'>
 				<svg
 					width='10'

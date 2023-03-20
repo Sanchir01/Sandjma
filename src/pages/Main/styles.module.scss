@@ -5,6 +5,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
+
+}
+.header a {
+  @apply hover:text-brown
 }
 .content_top {
 @apply pt-4 grid grid-cols-3 items-center

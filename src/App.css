@@ -9,17 +9,29 @@
 }
 body{
     font-weight: 300;
+<<<<<<< HEAD
     font-family: Raleway sans-serif;
     min-height: 100%;
+=======
+    font-family: "Work+Sans" ;
+
+}
+img{
+    display: inline-block;
+>>>>>>> d0a30a4 (сделал каталог)
 }
 a{
     cursor: pointer;
 }
+<<<<<<< HEAD
 img{
     max-width: 100%;
     max-height: 100%;
 
 }
+=======
+
+>>>>>>> d0a30a4 (сделал каталог)
 html{
     min-height: 100%;
 }
