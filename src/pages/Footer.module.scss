@@ -1,0 +1,36 @@
+.app{
+  background: #f7f7f7;
+  padding-top: 50px;
+}
+.navs{
+  max-width: 70%;
+  margin: auto;
+  display: flex;
+  color: #808080;
+  justify-content: space-between;
+  @apply text-2xl
+}
+.catalog{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  @apply text-xl
+}
+.company{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  @apply text-xl
+}
+.nav__social{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  @apply text-xl
+}
+.social{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center ;
+}
